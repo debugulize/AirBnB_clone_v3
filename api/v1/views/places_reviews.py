@@ -48,7 +48,7 @@ def delete_review(review_id):
                  strict_slashes=False)
 @swag_from('documentation/reviews/post_reviews.yml', methods=['POST'])
 def insert_review(place_id):
-    """Endpoint that insert a Review object"""
+    """Endpoint that inserts a Review object"""
     place = storage.get(Place, place_id)
     if place is None:
         abort(404)
