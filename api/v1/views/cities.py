@@ -66,7 +66,7 @@ def insert_city(state_id):
                  strict_slashes=False)
 @swag_from('documentation/city/put_city.yml', methods=['PUT'])
 def update_city(city_id):
-    """Endpoint that update a City object"""
+    """Endpoint that updates a City object"""
     city = storage.get(City, city_id)
     if city is None:
         abort(404)
