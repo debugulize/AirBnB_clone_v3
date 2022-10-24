@@ -23,7 +23,7 @@ def amenities():
                  strict_slashes=False)
 @swag_from('documentation/amenity/get_amenity.yml', methods=['GET'])
 def amenity_by_id(amenity_id):
-    """Get Amenity filter by id"""
+    """Get Amenity filter by its id"""
     res = storage.get(Amenity, amenity_id)
     if res is None:
         abort(404)
