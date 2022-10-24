@@ -55,7 +55,7 @@ def delete_amenity_from_place(place_id, amenity_id):
 @swag_from('documentation/place_amenity/post_place_amenities.yml',
            methods=['POST'])
 def insert_amenity_in_place(place_id, amenity_id):
-    """Insert new amenity object into Place object"""
+    """Insert new Amenity object into Place object"""
     place = storage.get(Place, place_id)
     amenity = storage.get(Amenity, amenity_id)
     if place is None or amenity is None:
