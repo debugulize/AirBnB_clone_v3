@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module implement a rule that returns the status of the application"""
+"""This module implement a rule responsible for returning the
+    status of the application"""
 from flask import jsonify
 import models
 from api.v1.views import app_views
