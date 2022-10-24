@@ -26,7 +26,7 @@ def place_by_city(city_id):
                  strict_slashes=False)
 @swag_from('documentation/place/get_place.yml', methods=['GET'])
 def show_place(place_id):
-    """Endpoint that return a Place object"""
+    """Endpoint that return a Place object by id"""
     place = storage.get(Place, place_id)
     if place is None:
         abort(404)
